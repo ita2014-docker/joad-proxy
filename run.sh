@@ -10,7 +10,7 @@ if [ -e /var/run/docker.sock ]; then
         docker_group_name=docker
         groupadd -g $docker_group_id $docker_group_name
     fi
-    gpasswd -a $NGINX_USER: $docker_group_name
+    gpasswd -a $NGINX_USER $docker_group_name
 fi
 
 /usr/local/nginx/sbin/nginx
